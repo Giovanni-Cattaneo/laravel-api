@@ -11,7 +11,7 @@ class ProjectController extends Model
     use HasFactory;
     public function index()
     {
-        $projects = Project::paginate(6);
+        $projects = Project::with('type', 'technologies')->orderByDesc('id')->paginate(12);
         return response()->json([
             'success' => true,
             'projects' => $projects
