@@ -14,7 +14,7 @@ class ProjectController extends Model
         $projects = Project::paginate(6);
         return response()->json([
             'success' => true,
-            'results' => $projects
+            'projects' => $projects
         ]);
     }
 }
