@@ -19,5 +19,5 @@ class Project extends Model
         return $this->belongsToMany('App\Models\Technology');
     }
     use HasFactory;
-    protected $fillable = ['title', 'category', 'cover_image', 'slug', 'url_site', 'url_source-code', 'type_id'];
+    protected $fillable = ['title', 'category', 'cover_image', 'slug', 'url_site', 'url_source-code', 'type_id', 'favourites'];
 }
