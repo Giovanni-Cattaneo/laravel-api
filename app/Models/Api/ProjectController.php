@@ -18,6 +18,15 @@ class ProjectController extends Model
         ]);
     }
 
+    public function showAll()
+    {
+        $projects = Project::all();
+        return response()->json([
+            'success' => true,
+            'projects' => $projects
+        ]);
+    }
+
     public function favourites()
     {
         $favourites = Project::with('type', 'technologies')->where('favourites', true)->orderByDesc('favourites')->paginate(100);
