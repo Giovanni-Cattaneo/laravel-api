@@ -28,4 +28,4 @@ Route::get('/favourites', [ProjectController::class, 'favourites']);
 
 Route::get('/projects/{project:slug}', [ProjectController::class, 'show']);
 
-Route::post('lead', [LeadController::class, 'store']);
+Route::post('/contacts', [LeadController::class, 'store']);
