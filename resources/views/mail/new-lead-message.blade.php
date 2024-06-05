@@ -1,13 +1,13 @@
 <x-mail::message>
     # Introduction
 
-    Sender: {{ $lead->name }}
+    Sender: Ciao
 
-    Email: {{ $lead->email }}
+    Email: bogio@gmail.com
 
     ## message
 
-    {{ $lead->message }}
+    eccomi infami
 
     <x-mail::button :url="''">
         Button Text

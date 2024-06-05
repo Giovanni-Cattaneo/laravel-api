@@ -44,5 +44,5 @@ Route::middleware(['auth', 'verified'])
 
 route::get('/mailable', function () {
     $lead = Lead::find(1);
-    return new App\Mail\NewLeadMessage;
+    return new App\Mail\NewLeadMessage($lead);
 });
