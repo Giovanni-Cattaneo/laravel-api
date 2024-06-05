@@ -40,3 +40,8 @@ Route::middleware(['auth', 'verified'])
         Route::resource('projects', ProjectController::class);
         Route::resource('technologies', Technology::class);
     });
+
+    // route::get('/mailable', function () {
+    //     $lead = Lead::find(1);
+    //     return new App\Mail\NewLeadMessage;
+    // });
