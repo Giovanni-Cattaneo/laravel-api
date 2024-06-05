@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\TypeController;
+use App\Models\Lead;
 use App\Models\Technology;
 use Illuminate\Support\Facades\Route;
 
@@ -41,7 +42,7 @@ Route::middleware(['auth', 'verified'])
         Route::resource('technologies', Technology::class);
     });
 
-    // route::get('/mailable', function () {
-    //     $lead = Lead::find(1);
-    //     return new App\Mail\NewLeadMessage;
-    // });
+route::get('/mailable', function () {
+    $lead = Lead::find(1);
+    return new App\Mail\NewLeadMessage;
+});
